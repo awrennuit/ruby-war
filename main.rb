@@ -1,8 +1,6 @@
 require_relative 'game'
 
 def main
-  # this feels a bit clunky, but i do like having a "sorry - try again" message
-  # the whole loop could be omitted if we are not concerned with that for this challenge
   invalid_selection = false
 
   loop do

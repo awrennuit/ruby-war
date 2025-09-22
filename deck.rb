@@ -1,10 +1,9 @@
 class Deck
-  # what the heck are these called??
-  CARD_DESIGNATIONS = %w[2 3 4 5 6 7 8 9 10 J Q K A].freeze
+  CARD_RANKS = %w[2 3 4 5 6 7 8 9 10 J Q K A].freeze
   SUITS = %w[C D H S].freeze
 
   def initialize
-    @cards = CARD_DESIGNATIONS.product(SUITS).map { |c, s| "#{c}#{s}" }
+    @cards = CARD_RANKS.product(SUITS).map { |c, s| "#{c}#{s}" }
     shuffle!
   end
 
