@@ -1,4 +1,4 @@
-# Build a War Card Game
+# War Card Game
 
 ## To run
 
