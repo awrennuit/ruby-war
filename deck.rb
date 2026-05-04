@@ -1,9 +1,14 @@
+# frozen_string_literal: true
+
+require_relative 'card'
+
+# Sets up, shuffles, and deals the deck
 class Deck
-  CARD_RANKS = %w[2 3 4 5 6 7 8 9 10 J Q K A].freeze
-  SUITS = %w[C D H S].freeze
+  RANKS = %w[2 3 4 5 6 7 8 9 10 J Q K A].freeze
+  SUITS = %w[clubs diamonds hearts spades].freeze
 
   def initialize
-    @cards = CARD_RANKS.product(SUITS).map { |c, s| "#{c}#{s}" }
+    @cards = RANKS.product(SUITS).map { |r, s| Card.new(rank: r, suit: s) }
     shuffle!
   end
 

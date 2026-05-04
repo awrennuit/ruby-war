@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
+# Tracks player data and hand info
 class Player
   attr_reader :name
 
-  def initialize(name)
+  def initialize(name:)
     @name = name
     @hand = []
   end
-  
+
   def add_cards(cards)
     @hand.unshift(*Array(cards))
   end
